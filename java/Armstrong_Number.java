@@ -23,7 +23,7 @@ public class ArmstrongNumber {
 		}
 		int st=0;
 		for(int i=0;i<c;i++) {
-			int temp=arr[i]*arr[i]*arr[i];
+			int temp=(int) Math.pow(arr[i],count);
 			st+=temp;
 		}
 		if(ori==st) {
