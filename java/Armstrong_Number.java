@@ -1,4 +1,3 @@
-package VSBpatQuestion;
 
 import java.util.Scanner;
 
