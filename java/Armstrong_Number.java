@@ -5,31 +5,31 @@ public class ArmstrongNumber {
 
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		int same=n;
-		int ori=n;
-		int c=0;
+		int num=sc.nextInt();
+		int original=n;
+		int copy=n;
+		int count=0;
 		while(n!=0) {
 			int quo=n%10;
 			n/=10;
-			c++;
+			count++;
 		}
-		int[] arr=new int[c];
+		int[] arr=new int[count];
 		int ind=0;
-		while(same!=0) {
-			int quo=same%10;
+		while(copy!=0) {
+			int quo=copy%10;
 			arr[ind++]=quo;
 			same/=10;
 		}
-		int st=0;
+		int comparsion=0;
 		for(int i=0;i<c;i++) {
 			int temp=(int) Math.pow(arr[i],count);
-			st+=temp;
+			comparsion+=temp;
 		}
-		if(ori==st) {
+		if(original==comparsion) {
 		System.out.println("Armstring number");
 		}else {
-		System.out.println(st);
+		System.out.println(comparsion);
 	}
 }
 
