@@ -9,7 +9,7 @@ public class N_Rotation {
 		String st="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		String res="";
 		while(num!=0) {
-			int temp=num%10;
+			int temp=num%n;
 			res=st.charAt(temp)+res;
 			num/=n;
 		}
