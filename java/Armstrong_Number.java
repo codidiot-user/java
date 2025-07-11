@@ -1,17 +1,15 @@
-
 import java.util.Scanner;
 
 public class ArmstrongNumber {
-
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int num=sc.nextInt();
-		int original=n;
-		int copy=n;
+		int original=num;
+		int copy=num;
 		int count=0;
-		while(n!=0) {
-			int quo=n%10;
-			n/=10;
+		while(num!=0) {
+			int quo=num%10;
+			num/=10;
 			count++;
 		}
 		int[] arr=new int[count];
@@ -19,18 +17,18 @@ public class ArmstrongNumber {
 		while(copy!=0) {
 			int quo=copy%10;
 			arr[ind++]=quo;
-			same/=10;
+			copy/=10;
 		}
 		int comparsion=0;
-		for(int i=0;i<c;i++) {
+		for(int i=0;i<count;i++) {
 			int temp=(int) Math.pow(arr[i],count);
 			comparsion+=temp;
 		}
 		if(original==comparsion) {
-		System.out.println("Armstring number");
+		System.out.println("Armstrong number");
 		}else {
 		System.out.println(comparsion);
 	}
+	}
 }
 
-}
